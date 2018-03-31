@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {UserData} from "./user-data/user-data.component";
+import {UserData} from "./UserData/UserData";
+
 
 @Component({
   selector: 'app-root',

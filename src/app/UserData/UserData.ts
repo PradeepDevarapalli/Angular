@@ -1,8 +1,7 @@
 import {Injectable} from "@angular/core";
 
 @Injectable()
-export class UserData
-{
+export  class UserData {
   users = [
     {
       "id": "4c285404-7902-444a-b8ad-891af2432588",
@@ -195,10 +194,8 @@ export class UserData
       "profilePic": "http://lorempixel.com/640/480/sports"
     }
   ];
-  getUsers()
-  {
+
+  getUsers() {
     return this.users;
   }
 }
-
-
