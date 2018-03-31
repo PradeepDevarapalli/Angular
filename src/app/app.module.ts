@@ -3,16 +3,18 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import {UserData} from './user-data/user-data.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserData
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [UserData],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
