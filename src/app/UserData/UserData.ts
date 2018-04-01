@@ -198,4 +198,8 @@ export  class UserData {
   getUsers() {
     return this.users;
   }
+  addUser(user)
+  {
+    this.users.unshift(user);
+  }
 }

@@ -1,0 +1,26 @@
+<form name ="user-form">
+  <div class="form-group">
+    <label for="firstName">FirstName</label>
+    <input type="text" required [(ngModel)] ="user.firstName" name="firstName" #userFirstName="ngModel" class="form-control" id="firstName" placeholder ="Enter FirstName">
+    <div class="alert alert-danger" *ngIf="userFirstName.touched && !userFirstName.valid">FirstName is required</div>
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">LastName</label>
+    <input type="text" required [(ngModel)]="user.lastName" name="lastName" #userLastName="ngModel" class="form-control" id="lastName" placeholder="Enter LastName">
+    <div *ngIf="userLastName.errors && (userLastName.dirty || userLastName.touched)" class="error">
+      <p [hidden]="!userLastName.errors.required">Last Name is required</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input  type="text" [(ngModel)]="user.email" name="email" class="form-control" id="email" placeholder="Enter Email"  >
+  </div>
+  <div class="form-group">
+    <label >State</label>
+    <select class="form-control" [(ngModel)]="user.address.state" name="state" >
+      <option *ngFor="let state of states" [value]="state">{{state}}</option>
+    </select>
+  </div>
+  <button class="btn btn-primary" (click)="addUser()">Submit</button>
+</form>
